@@ -4,6 +4,11 @@ public class PurchaseOrder {
     private double acquisitionCost;
     private int quantityPerPackage;
 
+    public PurchaseOrder(double acquisitionCost, int quantity) {
+        this.acquisitionCost = acquisitionCost;
+        this.quantityPerPackage = quantity;
+    }
+
     public void setAcquisitionCost(double acquisitionCost) {
         this.acquisitionCost = acquisitionCost;
     }
