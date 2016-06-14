@@ -7,9 +7,9 @@ import static com.developersdelicias.util.RoundNumberUtil.roundToFourDecimals;
 
 public class UnitCostCalculator {
     public double calculate(PurchaseOrder purchaseOrder, String unitCostCode) {
-        if (unitCostCode == null || unitCostCode.equals("UN")) {
-            return roundToFourDecimals(purchaseOrder.getUnitCost());
-        }
-        return round(purchaseOrder.getAcquisitionCost(), 2);
+
+        return unitCostCode == null || unitCostCode.equals("UN") ?
+                roundToFourDecimals(purchaseOrder.getUnitCost()) :
+                round(purchaseOrder.getAcquisitionCost(), 2);
     }
 }
